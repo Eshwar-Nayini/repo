@@ -1,9 +1,4 @@
- job('example') {
-  steps {
-    shell('echo Hello')
-    }
-}
-
+#!groovy
 windowsNode = 'windows'
 
 pipeline {
