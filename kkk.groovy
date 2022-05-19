@@ -1,5 +1,5 @@
-job(type: Maven) {
-    name('MyMavenJob')
+mavenJob("example") {
+    description('MyMavenJob')
     goals('install')
 
     preBuildSteps {
@@ -8,7 +8,7 @@ job(type: Maven) {
               'env | sort\n' +
               'echo "PRE BUILD END"\n')
     }
-    
+
     postBuildSteps {
         shell('#!/bin/bash\n' +
               'echo "POST BUILD SCRIPT"\n' +
